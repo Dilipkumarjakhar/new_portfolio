@@ -12,6 +12,7 @@
 }
 
 
+
 html {
   font-size: 62.5%;
   overflow-x: hidden;
@@ -22,11 +23,11 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-track {
-  background: #0d0d0d;
+  background: #4f1eff;
 }
 
 html::-webkit-scrollbar-thumb {
-  background: crimson;
+  background: rgb(255, 255, 255);
   
   border-radius: 5rem;
 }
@@ -38,7 +39,21 @@ body {
   padding-bottom: 6.5rem;
  
 }
+/* ---pre loader start ------- */
+#loader{
+  height: 100vh;
+  width: 100%;
+  position:fixed;
+  background:rgb(255, 255, 255) 
+  /* url('https://cdn.dribbble.com/users/1148781/screenshots/3233207/bold-preloader.gif') */
+  url('/images/Spinner-2.gif')
+  no-repeat center;
+  z-index: 1;
 
+ 
+}
+
+/* ---pre loader end------- */
 section {
   padding: 5rem 9%;
 }
@@ -55,6 +70,8 @@ section {
   text-transform: uppercase;
   color: crimson;
   color:#4eff66;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 .btn {
@@ -126,7 +143,7 @@ section {
 }
 
 .navbar a i {
-  color: crimson;
+  /* color: crimson; */
   color:#4eff66;
   padding-right: .5rem;
 }
@@ -182,7 +199,7 @@ section {
 .rotate{
   color:#ffffff;
   
-  animation: dj 0.5s linear infinite reverse;
+  animation: dj 1s linear infinite reverse;
 
 }
 .rotate1{
@@ -192,30 +209,168 @@ section {
 
 }
 .rotate2{
-  animation: dj2 1.5s linear infinite reverse;
+  color:#cdcdcd;
+
+  -webkit-animation: bounce-out-top 4.5s both;
+	        animation: bounce-out-top 4.5s both;
 }
 .rotate3{
-  animation: dj3 1.5s linear infinite reverse;
+  color:#cdcdcd;
+  
+  -webkit-animation: bounce-out-top 3.5s both;
+  animation: bounce-out-top 3.5s both;
 }
 .rotate4{
-  animation: dj4 1.5s linear infinite reverse;
+  color:#cdcdcd;
+  
+   -webkit-animation: bounce-out-top 5.5s both;
+   animation: bounce-out-top 5.5s both;
 }
 .rotate5{
-  animation: dj5 1.5s linear infinite reverse;
+  color:#cdcdcd;
+ 
+  -webkit-animation: bounce-out-top 2.5s both;
+  animation: bounce-out-top 2.5s both;
 }
-/* .rotate6{
-  animation: dj6 3.5s linear infinite reverse;
-} */
+@-webkit-keyframes bounce-out-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  5% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  15% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  25% {
+    -webkit-transform: translateY(-38px);
+            transform: translateY(-38px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  38% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  52% {
+    -webkit-transform: translateY(-75px);
+            transform: translateY(-75px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  70% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(-800px);
+            transform: translateY(-800px);
+    opacity: 0;
+  }
+}
+@keyframes bounce-out-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  5% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  15% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  25% {
+    -webkit-transform: translateY(-38px);
+            transform: translateY(-38px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  38% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  52% {
+    -webkit-transform: translateY(-75px);
+            transform: translateY(-75px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  70% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(-800px);
+            transform: translateY(-800px);
+    opacity: 0;
+  }
+}
+
+
+
 @keyframes dj {
   0%{
     transform: rotate(0deg);
+    color: #0efffb;
     
   }
-
-
+  20%{
+    transform: rotate(72deg);
+    color: #ff0ecb;
+    
+  }
+  40%{
+    
+    transform: rotate(144deg);
+    
+    color: #ffffff;
+  }
+  60%{
+    
+    transform: rotate(216deg);
+  
+    color: #fafafa;
+  }
+  80%{
+    
+    transform: rotate(298deg);
+    color: #ff0ecb;
+  }
   100%{
-
-    transform: rotate(100deg);
+    
+    transform: rotate(360deg);
+    color: #ff0ecb;
   }
 }
 @keyframes dj1 {
@@ -230,88 +385,14 @@ section {
     color: #4eff66;
   }
 }
-@keyframes dj2{
-  0%{
-    transform: rotate(10deg);
-    transform: translateY(10%); 
-   }
-  100%{
-    transform: translateY(-50%); 
-    color: #4eff66;
-    }
-}
-@keyframes dj3{
-  0%{
-   
-    transform: translateY(-50%); 
-   }
-  100%{
-    transform: translateY(10%); 
-    color: #4eff66;
-    }
-}
-@keyframes dj4{
-  0%{
-    
-    transform: translateY(10%); 
-   }
-  100%{
-    transform: translateY(-10%); 
-    color: #4eff66;
-    }
-}
-@keyframes dj5{
-  0%{
-    
-    transform: translateY(-15%); 
-   }
-  100%{
-    transform: translateY(15%); 
-    color: #4eff66;
-    }
-}
-@keyframes dj6{
-  100%{
-    
-    transform: translateX(-1800%);
-     
-    color:rgb(248, 248, 248);
-   }
-  80%{
-    
-    transform: translateX(-1600%); 
-    color:rgb(209, 209, 209);
-   }
-  60%{
-    
-    transform: translateX(-1400%); 
-    color:rgb(164, 164, 164);
-   }
-  20%{
-    
-    transform: translateX(-1200%); 
-    color:rgb(0, 0, 0);
-   }
-  15%{
-    transform: translateX(-1000%); 
-    color: #12fb29;
-    
-    }
-  10%{
-    transform: translateX(-800%); 
-    color: #2509fe;
-    }
-  5%{
-    transform: translateX(-500%); 
-    color: #fc8200;
-    }
-  0%{
-    transform: translateX(-300%); 
-    color: #d505a8;
-    
-    }
+
+
  
-}
+  
+
+  
+ 
+
 .home .content {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 42rem;
@@ -605,7 +686,7 @@ section {
    overflow: hidden; 
   position: relative;
   border: 1px solid #ccc;
-  box-shadow: 0.1rem 0.1rem 1rem 0.5rem rgb(172, 172, 172); 
+  box-shadow: 0.1rem 0.1rem 0.8rem 0.1rem #ffffff;
 }
 
 .portfolio .box-container .box:hover .content {
@@ -627,6 +708,8 @@ section {
   height: 100%;
   width: 100%;
   background: #1a1a1a;
+  background: #c814ff;
+    background: #6e07ff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -659,6 +742,7 @@ section {
   font-size: 1.5rem;
   line-height: 2;
   color: #aaa;
+  color: rgb(255, 255, 255);
 }
 .btn{
   display: inline-block;
@@ -674,6 +758,7 @@ section {
 }
 .portfolio .box-container .box .content i:hover {
   color: rgb(2, 2, 2);
+  
 }
 /* ---------demo web--------------   */
 
@@ -687,6 +772,7 @@ section {
   /* margin-left:2px; */
   padding:5px 5px;
   background-color: #000;
+  
   font-size: 1rem;
   color: rgb(255, 255, 255);
   border-radius: 10px;
@@ -706,6 +792,7 @@ section {
   padding: 2rem;
   border-radius: .5rem;
   background: #1a1a1a;
+  /* background: #fefefe; */
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
 }
@@ -738,6 +825,7 @@ section {
   padding: 1.5rem;
   display: inline-block;
   background: #0d0d0d;
+  /* background: #ffffff; */
 }
 
 .blogs .box-container .box .content .icons a {
