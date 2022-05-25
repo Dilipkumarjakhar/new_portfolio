@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ring</title>
+    <style>
+        *{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #00796b;
+           
+        }
+        .center-div{
+             height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #00796b;
+            position: relative;
+        }
+        .outer-ring{
+            height: 200px;
+            width: 200px;
+             /* background-color:chartreuse;  */
+             border-radius:50%;  
+
+            border-top: 8px solid whitesmoke;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-bottom: 8px solid white;
+            position: absolute;
+            animation: rotatring 2s linear infinite;
+        }
+         .middle-ring{
+            height: 140px;
+            width: 140px;
+             /* background-color:chartreuse;  */
+             border-radius:50%;  
+
+            border-top: 4px solid white;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-bottom: 4px solid white;
+            position: absolute;
+            animation: rotatring 2s linear infinite reverse;
+         }
+         .inner-ring{
+            height:100px;
+            width:100px;
+             /* background-color:chartreuse;  */
+             border-radius:50%;  
+
+            border-top:8px solid white;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-bottom: 8px solid white;
+            position: absolute;
+            animation: rotatring 1s linear infinite;
+        }
+        .dot{
+             height:60px;
+             width:60px;
+             background-color:wheat; 
+             border-radius:50%; 
+        }
+        @keyframes rotatring{
+            0%{
+                transform: rotate(0deg) scale(0.5);
+            }
+            100%{
+                transform: rotate(360deg) scale(1.5);
+                }
+            
+        }
+   </style>
+</head>
+<body onload="dilip()">
+    <div class="center-div">
+        <div class="outer-ring"></div>
+        <div class="middle-ring"></div>
+        <div class="inner-ring"></div>
+        <div class="dot"></div>
+    </div>
+    
+</body>
+</html>
+<script src="./index.js"></script>
