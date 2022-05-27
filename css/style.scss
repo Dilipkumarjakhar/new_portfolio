@@ -661,3 +661,18 @@ section{
   }
 
 }
+@media (max-width:380px){
+
+  html{
+    font-size: 20%;
+  }
+  .home{
+    text-align: center;
+    gap:2rem;
+
+    .image img{
+      height: 20rem;
+      width: 20rem;
+    }
+  }
+}
