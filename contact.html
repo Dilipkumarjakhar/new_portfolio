@@ -111,19 +111,32 @@
 
     </div>
 
-    <form action="">
+    <form 
+    action="https://formspree.io/f/xlezyaep"
+  method="POST">
 
         <div class="inputBox">
-            <input  type="text" placeholder="your name" >
-            <input type="number" placeholder="your number">
+            <input  type="text" 
+            name='name' placeholder="your name"  autocomplete="off" required>
+            <input type="number"
+            name="number" placeholder="your number" autocomplete="off"
+            required
+            minlength="10"
+            >
         </div>
 
         <div class="inputBox">
-            <input type="email" placeholder="your email">
-            <input type="text" placeholder="your subject">
+            <input 
+            name="email" type="email"
+            autocomplete="off" placeholder="your email" required>
+            <input type="text" autocomplete="off"
+             name="subject" placeholder="your subject" required>
         </div>
 
-        <textarea name="" placeholder="your message" id="" cols="30" rows="10"></textarea>
+        <textarea name="message"  autocomplete="off" required
+         placeholder="your message"
+          id="" cols="30" rows="10"
+          min="10"></textarea>
 
         
         <input type="submit" value="send message" class="btn">
@@ -157,4 +170,29 @@
       ho.style.display='block';
       
     }
+
+    function formsubmit(){
+        console.log('hi dilip')
+    }
+//     function ValidateEmail(inputText)
+// {
+// var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+// if(inputText.value.match(mailformat))
+// {
+// alert("Valid email address!");
+// document.form1.text1.focus();
+// return true;
+// }
+// else
+// {
+// alert("You have entered an invalid email address!");
+// document.form1.text1.focus();
+// return false;
+// }
+// }
+
+
+
+
+
     </script>
